@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Service2_gRPC";
+
+package greet;
+
+// burasý bir servis tanýmýdýr
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (stream HelloReply);
+}
+
+// burasý  
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
