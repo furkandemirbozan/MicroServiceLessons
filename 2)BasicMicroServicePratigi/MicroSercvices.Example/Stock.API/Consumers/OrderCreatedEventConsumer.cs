@@ -7,7 +7,7 @@ using Stock.API.Services;
 
 namespace Stock.API.Cunsomers;
 
-public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
+public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent> 
 {
     IMongoCollection<Stock.API.Models.Entities.Stock> _stockCollection;
     readonly ISendEndpointProvider _sendEndpointProvider;
