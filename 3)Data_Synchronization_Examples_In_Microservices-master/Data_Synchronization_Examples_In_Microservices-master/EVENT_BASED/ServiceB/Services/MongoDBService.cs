@@ -7,6 +7,7 @@ namespace ServiceB.Services
         readonly IMongoDatabase _database;
         public MongoDBService(IConfiguration configuration)
         {
+            // MongoDB bağlantı dizesini appsettings.json dosyasına ekleyin
             MongoClient client = new(configuration.GetConnectionString("MongoDB"));
             _database = client.GetDatabase("ServiceBDB");
         }
