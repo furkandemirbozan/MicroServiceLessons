@@ -15,11 +15,11 @@ MongoDBService mongoDBService = scope.ServiceProvider.GetService<MongoDBService>
 var collection = mongoDBService.GetCollection<Employee>();
 if (!collection.FindSync(s => true).Any())
 {
-    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e5", Name = "Gençay", Department = "Yazýlým" });
-    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e6", Name = "Hilmi", Department = "Aðýr vasýta" });
-    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e7", Name = "Þuayip", Department = "Oluk&Çatý" });
-    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e8", Name = "Rakýf", Department = "Muhabbet Sohbet" });
-    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e9", Name = "Rýfký", Department = "Þoför" });
+    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e5", Name = "Furkan", Department = "yazmacÄ±lÄ±m" });
+    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e6", Name = "Cemil", Department = "A" });
+    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e7", Name = "Suat", Department = "pif" });
+    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e8", Name = "Orhan", Department = "Muhabbet Sohbet" });
+    await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09e9", Name = "Yusuf", Department = "pof" });
     await collection.InsertOneAsync(new() { PersonId = "650240a832521eccf69b09ea", Name = "Muiddin", Department = "Muhasebe" });
 }
 #endregion
