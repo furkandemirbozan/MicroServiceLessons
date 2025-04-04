@@ -22,6 +22,7 @@ MongoDBService mongoDBService = scope.ServiceProvider.GetService<MongoDBService>
 var collection = mongoDBService.GetCollection<Person>();
 if (!collection.FindSync(s => true).Any())
 {
+
     await collection.InsertOneAsync(new() { Name = "Gençay" });
     await collection.InsertOneAsync(new() { Name = "Hilmi" });
     await collection.InsertOneAsync(new() { Name = "Þuayip" });
