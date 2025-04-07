@@ -2,7 +2,7 @@
 
 namespace Coordinator.Models
 {
-    public record NodeState(Guid TransactionId)
+    public record NodeState(Guid TransactionId)//TransactionId record'dan geliyor
     {
         public Guid Id { get; set; }
 
@@ -13,8 +13,11 @@ namespace Coordinator.Models
         /// <summary>
         /// 2. aşamanın neticesinde işlemin başarılı tamamlanıp, tamamlanmadığını ifade ediyor.
         /// </summary>
-        public TransactionState TransactionState { get; set; }
+        
 
+        //Enum TransactionState 
+        public TransactionState TransactionState { get; set; }
+        //bire çok ilişki bir tane Node olabilir
         public Node Node { get; set; }
     }
 }
